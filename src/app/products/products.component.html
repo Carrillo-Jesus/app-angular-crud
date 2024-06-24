@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <th scope="row">{{product.id}} </th>
+        <td>{{product.name}}</td>
+        <td>{{product.price | currency}}</td>
+        <td> <button class="btn btn-primary" [routerLink]="['product', product.id]">View</button></td>
+    </tr>
+  </tbody>
+</table>
